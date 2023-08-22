@@ -92,8 +92,5 @@ qRNAseq.py -d /your/path/to/fqdirectory -g /your/path/to/genome.fasta -a /your/p
 ## 脚本价值
 qRNAseq 可以说是RNAdiff的BEST Match，包括了RNAseq分析的全套流程，且极大降低了学习和使用门槛，如果大家能很好的结合使用qRNAseq 和RNAdiff，将会真正实现RNAdseq分析自由，再也不需要在公司花费以样本数为单位计算的高昂分析费用。**毕竟，不管什么时候，将命运掌握在自己手里，才是最让人安心的。**
 
-<a name="hoQoO"></a>
-## 写在最后
-今天是七夕节，祝天下有情人终成眷属，也祝每一个独立的灵魂，快乐且自由。
 
 
