@@ -71,11 +71,11 @@ class Hats():
         elif self.read=="s":
             for fq in os.listdir(self.directory):
 
-                sys.stderr.write('Mapping %s'%key)
-                hisat2_option='%s --max-intronlen %s --no-unal --no-temp-splicesite --novel-splicesite-outfile %s/bam/%s.splicesite --novel-splicesite-infile %s/bam/%s.splicesite'%(rnaseq_strand_op,self.intro,outdir,key,outdir,key)
+                sys.stderr.write('Mapping %s'%fq)
+                hisat2_option='%s --max-intronlen %s --no-unal --no-temp-splicesite --novel-splicesite-outfile %s/bam/%s.splicesite --novel-splicesite-infile %s/bam/%s.splicesite'%(rnaseq_strand_op,self.intro,outdir,fq,outdir,fq)
                 mapping_cmd='hisat2 -p %s %s -x %s -U %s/%s '%(self.thread,hisat2_option,self.genome,self.directory,fq)
                 sam2bam_cmd='samtools view -bS -'
-                sortbam_cmd='samtools sort -o %s/bam/%s.bam -'%(outdir,key)
+                sortbam_cmd='samtools sort -o %s/bam/%s.bam -'%(outdir,fq)
                 os.system('%s|%s|%s'%(mapping_cmd,sam2bam_cmd,sortbam_cmd))
         else:
             sys.stderr.write('ERROR:Parameter error!\n')
